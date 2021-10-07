@@ -1,4 +1,4 @@
-package mx.edu.utez.model;
+package mx.edu.utez.model.customer;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;

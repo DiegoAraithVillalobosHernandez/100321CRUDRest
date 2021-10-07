@@ -1,7 +1,7 @@
-package mx.edu.utez.model;
+package mx.edu.utez.model.customer;
 
 
-import mx.edu.utez.model.Customer;
+import mx.edu.utez.model.customer.Customer;
 import mx.edu.utez.service.ConnectionMySQL;
 
 import java.sql.*;

@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro | Actualización</title>
-    <link rel="stylesheet" href="bootstrap.min.css">
+    <title>Registro | Actualización Clientes</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
 </head>
 <body>
 <header>
@@ -19,13 +19,22 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.jsp">Búsqueda</a>
+                    <a class="nav-link" href="../index.jsp">Búsqueda | Eliminar</a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" >Registrar | Actualizar</a>
                 </li>
+            </ul>
+            <hr>
+            <ul class="navbar-nav mr-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="delete.jsp">Eliminar</a>
+                    <a class="nav-link" href="./offices.jsp">Oficios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./products.jsp">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./productsLine.jsp">Línea de Productos</a>
                 </li>
             </ul>
         </div>
@@ -125,7 +134,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-8  align-self-center text-right mt-2">
-                    <button class="btn btn-dark" onclick="return registerOrUpdate()" >Realizar acción</button>
+                    <button class="btn btn-dark" onclick="return regUpdCustomers()" >Realizar acción</button>
                 </div>
             </div>
         </form>
@@ -135,7 +144,7 @@
     </div>
 </section>
 
-<script src="main.js">
+<script src="../js/main.js">
 </script>
 <script src="https://code.jquery.com/jquery-3.2.1.js"
         integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>

@@ -7,8 +7,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
-    <link rel="stylesheet" href="./bootstrap.min.css">
+    <title>Inicio | Customers</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 
 <body>
@@ -23,13 +23,22 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link">Búsqueda</a>
+                    <a class="nav-link">Búsqueda | Eliminar</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="registerupdate.jsp">Registrar | Actualizar</a>
+                    <a class="nav-link" href="view/regUpdCustomers.jsp">Registrar | Actualizar</a>
+                </li>
+            </ul>
+            <hr>
+            <ul class="navbar-nav mr-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="view/offices.jsp">Oficios</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="delete.jsp">Eliminar</a>
+                    <a class="nav-link" href="view/products.jsp">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="view/productsLine.jsp">Línea de Productos</a>
                 </li>
             </ul>
         </div>
@@ -57,8 +66,8 @@
     </div>
 </section>
 <section>
-    <div class="container">
-        <table id="table" class="table table-striped table-dark mt-2 table-responsive">
+    <div class="container-fluid">
+        <table id="table" class="table table-striped table-dark mt-2">
             <thead>
             <tr>
                 <th scope="col">#</th>
@@ -70,6 +79,7 @@
                 <th scope="col">País</th>
                 <th scope="col">Representante ventas número</th>
                 <th scope="col">Límite de crédito</th>
+                <th scope="col">Acción</th>
             </tr>
             </thead>
             <tbody>
@@ -78,7 +88,7 @@
     </div>
 </section>
 
-<script src="./main.js">
+<script src="js/main.js">
 </script>
 <script src="https://code.jquery.com/jquery-3.2.1.js"
         integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>

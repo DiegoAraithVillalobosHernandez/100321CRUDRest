@@ -15,25 +15,4 @@ public class ConnectionMySQL {
         return DriverManager.getConnection(url, "root", "");
     }
 
-    public static void closeConnections(Connection con, CallableStatement cstm, ResultSet rs){
-        try{
-            if(rs != null) rs.close();
-
-            if(cstm != null) cstm.close();
-
-            if(con != null) con.close();
-
-        }catch(SQLException e){
-
-        }
-    }
-
-    public static void closeConnections(Connection con, CallableStatement cstm){
-        try{
-            if(cstm != null) cstm.close();
-
-            if(con != null) con.close();
-
-        }catch(SQLException e){ }
-    }
 }

@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 
 <html lang="en">
@@ -7,14 +7,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio | Customers</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Inicio | Oficios</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
 </head>
 
 <body>
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand">Gestión de clientes</a>
+        <a class="navbar-brand">Gestión de oficios</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -26,19 +26,18 @@
                     <a class="nav-link">Búsqueda | Eliminar</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="view/regUpdCustomers.jsp">Registrar | Actualizar</a>
+                    <a class="nav-link" href="./regUpdOffices.jsp">Registrar | Actualizar</a>
                 </li>
             </ul>
-            <hr>
             <ul class="navbar-nav mr-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="view/offices.jsp">Oficios</a>
+                    <a class="nav-link" href="./products.jsp">Productos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="view/products.jsp">Productos</a>
+                    <a class="nav-link" href="../index.jsp">Clientes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="view/productsLine.jsp">Línea de Productos</a>
+                    <a class="nav-link" href="./productsLine.jsp">Línea de Productos</a>
                 </li>
             </ul>
         </div>
@@ -50,16 +49,16 @@
             <div class="row p-2">
                 <div class="col-12 col-md-8">
                     <div class="form-group">
-                        <label for="customerNumber">Búsqueda por número de cliente: </label>
-                        <input type="number" name="customerNumber" id="customerNumber" class="form-control">
+                        <label for="officeCode">Búsqueda por código de oficio: </label>
+                        <input type="text" name="officeCode" id="officeCode" class="form-control">
                     </div>
                 </div>
                 <div class="col-12 col-md-4 align-self-center text-right">
                     <button type="submit" class="btn btn-success" style="width: 100%;"
-                            onclick="return getCustomer()">Buscar</button>
+                            onclick="return getOffice()">Buscar</button>
                 </div>
                 <div class="col-12  text-center mt-2">
-                    <button class="btn btn-dark" onclick="return getCustomers()">Cargar registros</button>
+                    <button class="btn btn-dark" onclick="return getOffices()">Cargar registros</button>
                 </div>
             </div>
         </form>
@@ -71,15 +70,15 @@
             <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Número de cliente</th>
-                <th scope="col">Nombre cliente</th>
-                <th scope="col">Nombre contacto</th>
-                <th scope="col">Celular</th>
+                <th scope="col">Código de oficio</th>
                 <th scope="col">Ciudad</th>
+                <th scope="col">Teléfono</th>
+                <th scope="col">Dirección 1</th>
+                <th scope="col">Dirección 2</th>
+                <th scope="col">Estado</th>
                 <th scope="col">País</th>
-                <th scope="col">Representante ventas número</th>
-                <th scope="col">Límite de crédito</th>
-                <th scope="col">Acción</th>
+                <th scope="col">Código postal</th>
+                <th scope="col">Territorio</th>
             </tr>
             </thead>
             <tbody>
@@ -88,7 +87,7 @@
     </div>
 </section>
 
-<script src="js/main.js">
+<script src="../js/main.js">
 </script>
 <script src="https://code.jquery.com/jquery-3.2.1.js"
         integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
