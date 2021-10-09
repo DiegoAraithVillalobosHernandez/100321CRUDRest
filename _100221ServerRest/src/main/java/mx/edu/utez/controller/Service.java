@@ -58,7 +58,7 @@ public class Service {
         }
     }
 
-    @DELETE
+    @POST
     @Path("/delete/{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public boolean deleteCustomer(@PathParam("id") int customerNumber) {
@@ -123,7 +123,7 @@ public class Service {
         }
     }
 
-    @DELETE
+    @POST
     @Path("/offices/delete/{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public boolean deleteOffice(@PathParam("id") String officeCode) {
@@ -184,7 +184,7 @@ public class Service {
         }
     }
 
-    @DELETE
+    @POST
     @Path("/prod_lines/delete/{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public boolean deleteProdLines(@PathParam("id") String productLine) {
@@ -240,10 +240,12 @@ public class Service {
         }
     }
 
-    @DELETE
+    @POST
     @Path("/products/delete/{id}")
     @Produces(MediaType.APPLICATION_JSON)
+    @Consumes("application/x-www-form-urlencoded")
     public boolean deleteProduct(@PathParam("id") String productCode) {
+        System.out.println("entre");
         return new ProductDao().deleteProduct(productCode);
     }
 
@@ -260,5 +262,11 @@ public class Service {
         Product product  = new Product(productCode, productName, productLine, productScale, productVendor, productDescription , quantityInStock, buyPrice, MSRP);
         System.out.println(product);
         return product;
+    }
+    @GET
+    @Path("/idEmployees/")
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<Integer> getIdEmployees() {
+        return new CustomerDao().findAllIdEmployees();
     }
 }

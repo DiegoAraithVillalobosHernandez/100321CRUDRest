@@ -164,4 +164,23 @@ public class CustomerDao {
             e.printStackTrace();
         }
     }
+    //Metodo para traer a los id representantes de ventas(Employees)
+    public List<Integer> findAllIdEmployees() {
+        List<Integer> listIdEmployees= new ArrayList();
+        try {
+            con = ConnectionMySQL.getConnection();
+            query = "SELECT employeeNumber  FROM employees;";
+            stm = con.createStatement();
+            rs = stm.executeQuery(query);
+            while (rs.next()) {
+                int id = rs.getInt("employeeNumber");
+                listIdEmployees.add(id);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            closeConnections();
+        }
+        return listIdEmployees;
+    }
 }
