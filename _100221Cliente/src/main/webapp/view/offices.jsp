@@ -13,7 +13,7 @@
     <!--Datatable-->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
      <!-- FONT AWESOME -->
-     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
+     <script src="https://kit.fontawesome.com/38af6b8e9f.js" crossorigin="anonymous"></script>
 </head>
 
 <body>

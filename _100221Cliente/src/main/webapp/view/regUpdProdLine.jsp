@@ -9,7 +9,7 @@
     <!--Bootstrap-->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
+    <script src="https://kit.fontawesome.com/38af6b8e9f.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <header>
@@ -89,9 +89,7 @@
             </div>
         </form>
     </div>
-    <div class="text-center bg-dark text-light">
-        <h1 id="mensaje"></h1>
-    </div>
+
 </section>
 
 

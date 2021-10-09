@@ -235,14 +235,14 @@ const getProductsLine = () => {
         url: url + "/customer/prod_lines/"
     }).done(function (res) {
         let prodsLine = res;
-        if (document.URL.includes("/view/regUpdProducts.html")) {
+        if (document.URL.includes("/view/regUpdProducts.jsp")) {
             //products FK
             let productLine = $("#productLine");
             productLine.append('<option value=" " selected disabled>Selecciona...</option>');
             for (let i = 0; i < prodsLine.length; i++) {
                 productLine.append(`<option value='${prodsLine[i].productLine}'>${prodsLine[i].productLine }</option>`);
             }
-        } else if (document.URL.includes("/view/productsLine.html")) {
+        } else if (document.URL.includes("/view/productsLine.jsp")) {
             let content = "";
 
             for (let i = 0; i < prodsLine.length; i++) {
@@ -402,7 +402,7 @@ const deleteOffice = (officeCode) => {
     });
     return false;
 }
-console.log(document.URL);
+
 switch (document.URL) {
     case urlClient + "/index.jsp":
         getCustomers();
@@ -414,6 +414,8 @@ switch (document.URL) {
         getProducts();
         break;
     case urlClient + "/view/regUpdProducts.jsp":
+        getProductsLine();
+        break;
     case urlClient + "/view/productsLine.jsp":
         getProductsLine();
         break;
